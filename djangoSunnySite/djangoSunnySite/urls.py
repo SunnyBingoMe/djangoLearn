@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^webapp/', include('webapp.urls')),
     url(r'^', include('app111.urls')),
     url(r'^blog/', include('blog.urls')),
-    #url(r'^app_underline/', include('app_underline.urls')),
+    url(r'^api/', include('blog.urls', namespace='rest_framework')),
 ]
