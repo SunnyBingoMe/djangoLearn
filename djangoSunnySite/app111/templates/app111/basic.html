@@ -1,0 +1,8 @@
+{%extends 'app111/headerBootstrap.html' %}
+
+{%block content%}
+    {% for tcString in content %} 
+    <!-- this content is the variable passed from views.py's function-based view contact(), and it is different with "block content", and, there is no conflict!!! (sunny: i prefer use another varialbe name) -->
+        <p>{{tcString}}</p>
+    {% endfor %}
+{% endblock %}
