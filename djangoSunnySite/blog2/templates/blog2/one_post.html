@@ -1,0 +1,7 @@
+{% extends "app111/headerBootstrap.html" %}
+
+{% block content %}
+    <h3>{{post.title}}</h3>
+    <h6>{{post.date}}</h6>
+    {{post.body|safe|linebreaks}} <!-- the "safe" filter tells jinja that the string is safe (no need to escape html tags), so we can have html tags taking effect (come into operation) instead of escaped and displayed as plain text -->
+{% endblock %}

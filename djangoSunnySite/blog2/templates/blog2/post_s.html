@@ -1,0 +1,8 @@
+{% extends "app111/headerBootstrap.html" %}
+
+{% block content %}
+    {% for one_post in postS %}
+    <h5>{{ one_post.date|date:"Y-m-d" }} <a href="/blog/{{one_post.id}}">{{one_post.title}}</a></h5> <!-- jinja: apply a filter to format date -->
+    {% endfor %}
+{% endblock %}
+
