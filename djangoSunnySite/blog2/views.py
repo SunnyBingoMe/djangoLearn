@@ -1,5 +1,6 @@
+from django.urls.base import reverse_lazy
 from django.views import generic
-from django.views.generic.edit import CreateView # more: UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from blog2.models import Post
 
@@ -16,6 +17,17 @@ class DetailView(generic.DetailView):
     template_name = "blog2/one_post.html"
     model = Post
 
+
 class PostCreate(CreateView):
     model = Post
     fields = ['title', 'body', 'date']
+
+
+class PostUpdate(UpdateView):
+    model = Post
+    fields = ['title', 'body', 'date']
+
+
+class PostDelete(DeleteView):
+    model = Post
+    success_url = reverse_lazy('blog2:index')
