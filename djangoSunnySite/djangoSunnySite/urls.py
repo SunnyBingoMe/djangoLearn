@@ -21,6 +21,6 @@ urlpatterns = [
     url(r'^webapp/', include('webapp.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^api/', include('blog.urls', namespace='rest_framework')),
-    url(r'^blog2/', include('blog2.urls')),
+    url(r'^blog2/', include('blog2.urls', namespace='blog2')),
     url(r'^', include('blog2.urls')),
 ]
