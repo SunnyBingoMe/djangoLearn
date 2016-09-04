@@ -18,9 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^webapp/', include('webapp.urls')),
-    url(r'^blog/', include('blog.urls')),
-    url(r'^api/', include('blog.urls', namespace='rest_framework')),
+    #url(r'^webapp/', include('webapp.urls')),
+    #url(r'^blog/', include('blog.urls')),
+    url(r'^api1/', include('api1.urls', namespace='rest_framework')),
     url(r'^blog2/', include('blog2.urls', namespace='blog2')),
     url(r'^', include('blog2.urls')),
 ]

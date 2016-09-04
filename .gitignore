@@ -7,6 +7,8 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+.idea/
+djangoSunnySite/.idea/*
 .Python
 env/
 build/
@@ -137,3 +139,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+djangoSunnySite/.idea/dataSources.ids
+djangoSunnySite/.idea/dataSources.xml
+djangoSunnySite/.idea/dataSources.ids
