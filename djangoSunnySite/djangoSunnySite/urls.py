@@ -13,7 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
 
 urlpatterns = [
@@ -22,5 +24,6 @@ urlpatterns = [
     #url(r'^blog/', include('blog.urls')),
     url(r'^api1/', include('api1.urls', namespace='rest_framework')),
     url(r'^blog2/', include('blog2.urls', namespace='blog2')),
+    url(r'^upload/', include('upload.urls', namespace='upload')),
     url(r'^', include('blog2.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # influencing http-get & display media files (in browser) seems unmatched urls will try match here, not influencing uploading
