@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^api1/', include('api1.urls', namespace='rest_framework')),
     url(r'^blog2/', include('blog2.urls', namespace='blog2')),
     url(r'^upload/', include('upload.urls', namespace='upload')),
+    url(r'^simple_multi/', include('simple_multi.urls', namespace='simple_multi')),  # pip install django-multiupload
     url(r'^', include('blog2.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # influencing http-get & display media files (in browser) seems unmatched urls will try match here, not influencing uploading

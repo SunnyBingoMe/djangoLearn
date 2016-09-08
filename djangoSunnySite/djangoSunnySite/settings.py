@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
-    'app111','blog2','api1','upload',
+    'app111', 'blog2', 'api1', 'upload', 'simple_multi',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
